@@ -1,0 +1,34 @@
+/*---==========ROBOTO FONT FAMILY==========----*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  background-color: aquamarine;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  padding: 14px 0;
+}
+
+.todo-form h2 {
+  text-decoration: underline;
+}
+.todo-form label {
+  font-size: 23px;
+}
+.todo-form input {
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */
