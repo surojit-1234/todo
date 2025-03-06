@@ -6,6 +6,8 @@ import Navbar from './componets/Navbar';
 import Completed from './pages/Completed';
 import Active from './pages/Active';
 import All from './pages/All';
+import Edit from './pages/Edit';
+import View from './pages/View';
 
 const App = () => {
     
@@ -18,8 +20,10 @@ const App = () => {
             <Route path='/all' element={<All />} />
             <Route path='/active' element={<Active />} />
             <Route path='/completed' element={<Completed />} />
+            <Route path='/edit' element={<Edit />} />
+            <Route path='/view/:id' element={<View />} />
           </Routes>
-        </Router>
+        </Router> 
     </div>
   )
 }
