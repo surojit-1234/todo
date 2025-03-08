@@ -126,7 +126,6 @@ const Register = () => {
                         <option value="2">Editor</option>
                         <option value="3">User</option>
                     </select>
-                    <a href='javascript:void(0)'>Forgot Password?</a>
                     <Link to='/'>Already Have an Account??</Link>
                     <button type="submit" className="btn-1">
                         <span>Sign Up</span>

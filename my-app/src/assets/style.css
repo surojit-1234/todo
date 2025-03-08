@@ -105,21 +105,21 @@ h2 {
   text-align: center;
 }
 
-.form {
+form {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.form h2 {
+form h2 {
   margin-bottom: 24px !important;
 }
 
-.form .form-input {
+form input {
   border: 1px solid rgb(240, 234, 234);
 }
 
-.form-input {
+input {
   padding: 0.75rem;
   border: 2px solid transparent;
   border-radius: 5px;
@@ -130,7 +130,7 @@ h2 {
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.form-input:focus {
+input:focus {
   border: 2px solid #4fcf70; /* Border color when focused */
   box-shadow: 0 0 10px rgba(79, 207, 112, 0.6); /* Glowing effect */
 }

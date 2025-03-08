@@ -8,7 +8,7 @@ router.post('/login', loginController)
 router.post('/email-verify', emailVerifyController);
 // router.get('/get-user', getAllUser);
 // router.get('/get-single-user/:id', getSingleUser);
-router.post('/forgetMail', forgetPassword);
+//router.post('/forgetMail', forgetPassword);
 router.post('/resetPass/:id', resetController);
 
 router.post('/create-users', createUser);               // Create a user

@@ -82,3 +82,14 @@ export const deleteTaskController = async (req, res) => {
         res.status(500).json({ message: 'Error deleting task', error });
     }
 };
+
+export const completeStatusController = async (req, res) => {
+    
+    try{
+        const {id} = req.params;
+        await db.query(`UPDATE task_list SET status = 1 WHERE id = ?`,[id]);
+        res.status(200).json({ message: 'completed' });
+    }catch(error){
+        res.status(500).json({ message: 'Error deleting task', error });
+    }
+}

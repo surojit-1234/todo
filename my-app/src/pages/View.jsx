@@ -29,7 +29,7 @@ const View = () => {
             <h1>Title: {singleData.title} </h1>
             <p><b>Description: </b>{singleData.description} </p>
             <p><b>Dated on: </b> {singleData.createdAt?.slice(0,10).split('').join('')} </p>
-            <Link to='/'> Back to Home </Link>
+            <Link to='/todo'> Back to Home </Link>
         </div>
     </section>
 

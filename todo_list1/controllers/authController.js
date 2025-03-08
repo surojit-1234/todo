@@ -53,7 +53,7 @@ export const loginController = async (req, res) => {
                 message: 'Email is not registered'
             });
         }
-
+        let role_id = user[0].role_id;
         const match = await comparePassword(password, user[0].password);
         if (!match) {
             return res.status(404).send({
@@ -67,6 +67,7 @@ export const loginController = async (req, res) => {
             success: true,
             message: 'Login successfully',
             token,
+            role_id,
         });
     } catch (error) {
         console.error(error);
@@ -121,7 +122,7 @@ export const emailVerifyController = async (req, res) => {
             secure: false, // Use TLS
             auth: {
                 user: process.env.EMAIL,  // Your email
-                pass: process.env.PASSWORD,  // Your email password or app password
+                pass: process.env.PASS,  // Your email password or app password
             },
         });
 
@@ -134,7 +135,7 @@ export const emailVerifyController = async (req, res) => {
 
         transporter.sendMail(mailOptions, (err, info) => {
             if (err) {
-                return res.status(500).json({ message: 'Error sending verification email', error: err });
+               return res.status(500).json({ message: 'Error sending verification email', error: err });
             }
 
             res.status(200).json({ message: 'Verification email sent successfully!', info });
@@ -147,6 +148,7 @@ export const emailVerifyController = async (req, res) => {
             error,
         });
     }
+
 };
 
 

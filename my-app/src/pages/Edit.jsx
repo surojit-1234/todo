@@ -38,7 +38,7 @@ const Edit = () => {
             theme: "dark",
           });
           setTimeout(()=> {
-            navigate('/');
+            navigate('/todo');
           },2000);
         })
         .catch((err)=> console.log(err))
@@ -52,7 +52,7 @@ const Edit = () => {
   return (
     <>
       <form 
-        className='todo-form form-control w-75 m-auto p-4'
+        className='todo-form form-control w-75 m-auto p-4 my-5'
         onSubmit={handleUpdate}
       >
 
@@ -88,7 +88,7 @@ const Edit = () => {
             <Button type='submit' variant="success w-50 m-auto p-2">UPDATE TODO</Button> 
           </div>
       </form>
-      <Link to='/' className='d-block text-center mt-5'>Back to Home</Link>
+      <Link to='/todo' className='d-block text-center mt-5'>Back to Home</Link>
       <ToastContainer />
     </>
   )
